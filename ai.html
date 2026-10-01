@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0bf">
+  <meta name="description" content="Ask Just Hampers AI for gift ideas, budget-aware hampers and premium gifting suggestions.">
+  <title>JUST HAMPERS AI | Just Hampers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="justhamperlogo.jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ai.css">
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/data.js"></script>
+  <script defer src="js/builder-data.js"></script>
+  <script defer src="js/ai.js"></script>
+</head>
+<body class="ai-body">
+  <a class="skip-link" href="#ai-main">Skip to AI assistant</a>
+  <header class="site-header ai-header">
+    <a class="brand" href="index.html" aria-label="Just Hampers home">
+      <img class="brand-mark" src="justhamperlogo.jpeg" alt="" width="46" height="46">
+      <span class="brand-copy"><strong>JUST HAMPERS</strong><small>Premium, just for You.</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open AI navigation" aria-expanded="false" aria-controls="ai-navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="ai-navigation" id="ai-navigation" aria-label="AI navigation">
+      <a href="index.html">Home</a>
+      <a href="builder.html">Build a Hamper</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="tracking.html">Track Order</a>
+      <a href="ai.html" aria-current="page">AI Assistant</a>
+    </nav>
+    <div class="auth-widget auth-widget-inline" data-auth-root aria-live="polite"></div>
+  </header>
+
+  <main class="ai-page" id="ai-main">
+    <section class="ai-intro" aria-labelledby="ai-title">
+      <p class="eyebrow"><span class="eyebrow-line"></span> JUST HAMPERS AI</p>
+      <h1 id="ai-title">Not Sure What to Gift? Just Ask.</h1>
+      <p>Tell us who you're gifting, what they like, your budget and the occasion. We'll help you find something they'll love.</p>
+    </section>
+
+    <section class="ai-shell" aria-label="Gifting assistant shell">
+      <div class="ai-chat-panel">
+        <div class="chat-thread" id="chat-thread" aria-live="polite">
+          <div class="message assistant-message">
+            <span class="message-role">AI</span>
+            <p>I can help narrow the gift down. Try a prompt like “I need a gift for my boss. Budget is ₦70,000. He likes coffee and premium snacks.”</p>
+          </div>
+        </div>
+
+        <form id="ai-form" class="ai-form" novalidate>
+          <label class="sr-only" for="gift-query">Describe your gift idea</label>
+          <textarea id="gift-query" name="gift-query" rows="4" aria-label="Describe your gifting need" placeholder='I need a gift for my boss. Budget is ₦70,000. He likes coffee and premium snacks.'>I need a gift for my boss. Budget is ₦70,000. He likes coffee and premium snacks.</textarea>
+          <div class="ai-form-actions">
+            <div class="suggestion-pills" aria-label="Suggested prompts">
+              <button type="button" class="suggestion-chip" data-prompt="Gift for my mum under ₦50,000">Gift for my mum under ₦50,000</button>
+              <button type="button" class="suggestion-chip" data-prompt="A luxury birthday gift for my wife">A luxury birthday gift for my wife</button>
+              <button type="button" class="suggestion-chip" data-prompt="Corporate gifts for 50 employees">Corporate gifts for 50 employees</button>
+              <button type="button" class="suggestion-chip" data-prompt="A Christmas gift for a client">A Christmas gift for a client</button>
+              <button type="button" class="suggestion-chip" data-prompt="Something special for a coffee lover">Something special for a coffee lover</button>
+            </div>
+            <button class="button button-primary ai-submit" type="submit">Find My Perfect Gift <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="ai-insight-panel" aria-live="polite">
+        <div class="insight-card">
+          <p class="card-label">Request Insights</p>
+          <dl id="ai-insights"></dl>
+        </div>
+        <div class="insight-card">
+          <p class="card-label">How it works</p>
+          <ul class="mini-list">
+            <li>Understands the relationship and occasion</li>
+            <li>Filters products by stated budget</li>
+            <li>Connects to existing hamper builder</li>
+            <li>Ensures recommendations stay catalogue-aware</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="recommendation-section" id="recommendations" aria-live="polite"></section>
+  </main>
+</body>
+</html>

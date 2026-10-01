@@ -1,7 +1,7 @@
 :root {
   --tracking-ink: #292320;
   --tracking-rose: #f6e7ea;
-  --tracking-card: #fffdf8;
+  --tracking-card: var(--cream);
   --tracking-line: rgba(73, 40, 36, 0.12);
   --tracking-success: #2d6956;
   --tracking-warning: #9a5c00;
@@ -10,7 +10,7 @@
 }
 
 .tracking-body {
-  background: linear-gradient(180deg, #fffaf0 0%, #fffaf7 100%);
+  background: linear-gradient(180deg, var(--paper) 0%, #f3e5bd 100%);
 }
 
 .tracking-header {
@@ -63,7 +63,7 @@
   gap: 14px;
   padding: 18px 20px 18px 18px;
   border: 1px solid var(--tracking-line);
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--cream);
   box-shadow: 0 18px 40px rgba(34, 20, 19, 0.05);
 }
 
@@ -71,7 +71,7 @@
   width: 100%;
   min-height: 52px;
   border: 1px solid rgba(120, 27, 49, 0.18);
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--cream);
   padding: 0 16px;
   color: var(--tracking-ink);
   font-size: 18px;
@@ -94,7 +94,7 @@
 .shipment-card,
 .empty-state {
   border: 1px solid var(--tracking-line);
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--cream);
   box-shadow: 0 8px 22px rgba(35, 20, 17, 0.03);
 }
 
@@ -365,7 +365,7 @@
 }
 
 .info-card-map {
-  background: linear-gradient(180deg, rgba(244, 240, 235, 0.8) 0%, rgba(255, 255, 255, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(244, 240, 235, 0.8) 0%, rgba(198, 155, 76, 0.16) 100%);
 }
 
 .corporate-summary-line {
@@ -479,7 +479,7 @@
 .shipment-table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--cream);
   border: 1px solid var(--tracking-line);
 }
 

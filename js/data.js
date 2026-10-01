@@ -1,22 +1,23 @@
 (function () {
   const image = (id, width) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=82`;
+  const pexelsImage = (id, width = 700) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${width}&q=82`;
 
   window.HamperData = {
     categories: [
       { name: 'Christmas Hampers', icon: '✳', description: 'A little extra magic for the season.', image: image('photo-1512909006721-3d6018887383', 700), alt: 'A thoughtfully wrapped seasonal gift' },
       { name: 'Corporate Hampers', icon: '▧', description: 'Good things, thoughtfully shared.', image: image('photo-1607082348824-0a96f2a4b9da', 700), alt: 'A selection of beautifully presented gifts' },
-      { name: 'Wedding & Introduction', icon: '♡', description: 'A lovely beginning, beautifully marked.', image: image('photo-1511795409834-ef04bbd61622', 700), alt: 'An elegant celebration table' },
-      { name: 'Birthday Hampers', icon: '✷', description: 'For their once-a-year kind of day.', image: image('photo-1511988617509-a57c8a288659', 700), alt: 'Friends celebrating together' },
+      { name: 'Wedding & Introduction', icon: '♡', description: 'A lovely beginning, beautifully marked.', image: 'https://images.unsplash.com/photo-1529832588601-c01e066263a8?auto=format&fit=crop&w=700&q=82', alt: 'Women in Botswana gathering to celebrate with gifts and drinks' },
+      { name: 'Birthday Hampers', icon: '✷', description: 'For their once-a-year kind of day.', image: pexelsImage(9705936), alt: 'African family celebrating Kwanzaa and sharing gifts' },
       { name: 'Valentine’s Gifts', icon: '♥', description: 'A little way to say, it’s you.', image: image('photo-1513201099705-a9746e1e201f', 700), alt: 'A gift wrapped with care' },
-      { name: 'Women’s Gifts', icon: '✿', description: 'For the wonderful women in your world.', image: image('photo-1524504388940-b1c1722653e1', 700), alt: 'A woman smiling in natural light' },
-      { name: 'Men’s Gifts', icon: '✦', description: 'Considered little luxuries, just for him.', image: image('photo-1506794778202-cad84cf45f1d', 700), alt: 'A portrait of a smiling man' },
-      { name: 'Baby Gifts', icon: '☼', description: 'A warm welcome for someone brand new.', image: image('photo-1511895426328-dc8714191300', 700), alt: 'A joyful family moment' },
+      { name: 'Women’s Gifts', icon: '✿', description: 'For the wonderful women in your world.', image: pexelsImage(10226305), alt: 'A woman in African traditional attire and a blue turban' },
+      { name: 'Men’s Gifts', icon: '✦', description: 'Considered little luxuries, just for him.', image: pexelsImage(5458494), alt: 'A Black man standing against a sunset sky' },
+      { name: 'Baby Gifts', icon: '☼', description: 'A warm welcome for someone brand new.', image: pexelsImage(33890093), alt: 'A Nigerian mother holding her baby girl in traditional attire' },
       { name: 'Appreciation Gifts', icon: '♡', description: 'For the people who make a difference.', image: image('photo-1523438885200-e635ba2c371e', 700), alt: 'A thoughtful detail for a special occasion' },
       { name: 'Hampers by Budget', icon: '₦', description: 'A lovely gesture, at just the right price.', image: image('photo-1549465220-1a8b9238cd48', 700), alt: 'A wrapped gift ready to give' }
     ],
     products: [
       { id: 'classic', name: 'The Classic', description: 'A timeless mix of little luxuries and everyday favourites.', price: 'Price coming soon', size: 'Medium', image: image('photo-1549465220-1a8b9238cd48', 850), alt: 'A classic gift box wrapped in paper', tone: 'sage' },
-      { id: 'celebration', name: 'The Celebration Box', description: 'A bright, joyful collection for their big little day.', price: 'Price coming soon', size: 'Large', image: image('photo-1527529482837-4698179dc6ce', 850), alt: 'A joyful gathering with friends', tone: 'peach' },
+      { id: 'celebration', name: 'The Celebration Box', description: 'A bright, joyful collection for their big little day.', price: 'Price coming soon', size: 'Large', image: pexelsImage(9705716, 850), alt: 'An African-American family celebrating Kwanzaa at home with gifts and music', tone: 'peach' },
       { id: 'executive', name: 'The Executive', description: 'A polished thank-you for clients, teams and partners.', price: 'Price coming soon', size: 'Large', image: image('photo-1607082348824-0a96f2a4b9da', 850), alt: 'Carefully arranged premium gifts', tone: 'olive' },
       { id: 'love', name: 'The Love Box', description: 'A sweet, thoughtful reminder that they’re your person.', price: 'Price coming soon', size: 'Medium', image: image('photo-1513201099705-a9746e1e201f', 850), alt: 'A romantic gift wrapped with a ribbon', tone: 'rose' },
       { id: 'luxury', name: 'The Luxury Collection', description: 'An extra-special gathering of beautiful things.', price: 'Price coming soon', size: 'Large', image: image('photo-1512909006721-3d6018887383', 850), alt: 'An elegant arrangement of wrapped presents', tone: 'sand' },

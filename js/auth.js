@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = 'justHampersGoogleUser';
-  const CLIENT_ID = window.GOOGLE_CLIENT_ID || '410425343051-kheo733k6m58j9k4um2qba3433q4pjis.apps.googleusercontent.com';
+  const CLIENT_ID = window.GOOGLE_CLIENT_ID || '66440173555-lnjl4kf4g4bkd2pmk5hmckpt0g49i62s.apps.googleusercontent.com';
   let googleSdkPromise = null;
   let googleInitialized = false;
 
